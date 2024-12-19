@@ -80,7 +80,10 @@ public class JavaConfigTest {
     @Test
     public  void test07(){
         InterfaceA bean = ioc.getBean(InterfaceA.class);
-        bean.a();
+        bean.a();  // A
+
+        InterfaceA bean2 = ioc.getBean("beanB", InterfaceA.class);
+        bean2.a();  // B
     }
 }
 

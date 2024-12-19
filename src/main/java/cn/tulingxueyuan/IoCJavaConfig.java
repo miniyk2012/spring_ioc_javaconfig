@@ -87,6 +87,7 @@ public class IoCJavaConfig {
   }
 
   @Bean
+  @Primary
   public InterfaceA beanA() {
     return new BeanA();
   }
