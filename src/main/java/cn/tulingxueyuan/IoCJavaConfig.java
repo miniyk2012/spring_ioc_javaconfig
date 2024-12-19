@@ -1,5 +1,8 @@
 package cn.tulingxueyuan;
 
+import cn.tulingxueyuan.beans.BeanA;
+import cn.tulingxueyuan.beans.BeanB;
+import cn.tulingxueyuan.beans.InterfaceA;
 import cn.tulingxueyuan.beans.MyImportBeanDefinitionRegistrar;
 import cn.tulingxueyuan.beans.MyImportSelector;
 import cn.tulingxueyuan.beans.Role;
@@ -10,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 
 /***
@@ -80,5 +84,15 @@ public class IoCJavaConfig {
   @Bean
   public User user3() {
     return new User();
+  }
+
+  @Bean
+  public InterfaceA beanA() {
+    return new BeanA();
+  }
+
+  @Bean
+  public InterfaceA beanB() {
+    return new BeanB();
   }
 }

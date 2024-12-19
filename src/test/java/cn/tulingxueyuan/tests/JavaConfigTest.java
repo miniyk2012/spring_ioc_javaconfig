@@ -1,6 +1,7 @@
 package cn.tulingxueyuan.tests;
 
 import cn.tulingxueyuan.IoCJavaConfig;
+import cn.tulingxueyuan.beans.InterfaceA;
 import cn.tulingxueyuan.beans.Person;
 import cn.tulingxueyuan.beans.Role;
 import cn.tulingxueyuan.beans.User;
@@ -75,4 +76,11 @@ public class JavaConfigTest {
         Person bean = (Person) ioc.getBean("personx");
         System.out.println(bean.getName());
     }
+
+    @Test
+    public  void test07(){
+        InterfaceA bean = ioc.getBean(InterfaceA.class);
+        bean.a();
+    }
 }
+
